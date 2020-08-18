@@ -1,0 +1,46 @@
+.main-page {
+   position: absolute;
+   background-color: rgb(227, 224, 230);
+   top: 86px;
+   right: 50px;
+   border-radius: 6px;
+   padding: 8px;
+   opacity: 95%;
+ }
+
+ .form-body {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+ }
+
+ .form-header {
+  color:  rgb(64, 64, 237);
+  font-family: sans-serif;
+ }
+ 
+ .form-label {
+  font-size: 20px;
+  font-family: sans-serif;
+ }
+
+ .form-label > input {
+   display: flex;
+ }
+
+ .form-btn {
+  font-size: 24px;
+  height: 40px;
+  font-family: sans-serif;
+  color: white;
+  padding: 0 10px;
+  background-color: rgb(43, 204, 43);
+  border-radius: 4px;
+  margin-top: 10px;
+ }
+
+ .form-btn:hover {
+   background-color: rgb(3, 128, 34);
+ }
+
+ 
