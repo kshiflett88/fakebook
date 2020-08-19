@@ -1,0 +1,18 @@
+.greeting-container {
+  background-color: rgb(57, 115, 250);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.greeting-header {
+  display: flex;
+}
+
+.greeting-logout-btn {
+  padding: 10px;
+}
+
+.greeting-username {
+  padding-right: 5px;
+}
+

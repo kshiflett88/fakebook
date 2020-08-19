@@ -9,17 +9,14 @@ class Greeting extends React.Component {
 
   render() {
     return (
-      <div className='greeting'>
+      <div className='greeting-container'>
         {this.props.currentUser ?
-          <div>
-            <h3>Welcome {this.props.currentUser.username}</h3>
-            <button onClick={this.props.logout}>Log Out</button>
+          <div className="greeting-header">
+            <h3 className="greeting-username">Welcome {this.props.currentUser.username}</h3>
+            <button className="greeting-logout-btn" onClick={this.props.logout}>Log Out</button>
           </div>
           :
           <div className="greeting-btn">
-            <Link className="btn" to="/signup">Sign Up</Link>
-        
-            <Link className="btn" to="/login">Log In</Link>
           </div>}
       </div>
     )
