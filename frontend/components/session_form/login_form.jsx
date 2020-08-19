@@ -36,13 +36,15 @@ class LoginForm extends React.Component {
   }
 
   renderErrors() {
+    
     return (
       <ul>
-        {this.props.errors.map((error, i) => {
-          return (<li className='error' key={i}>
-            {error}
-          </li>)
-        })}
+        {this.props.errors.map((error, i) => (
+          error === "invalid username or password" ?
+         (<li className='error' key={i}>
+            {error} 
+          </li>) : null
+        ))}
       </ul>
     )
   }
@@ -89,7 +91,6 @@ class LoginForm extends React.Component {
             <div className="render-errors">{this.renderErrors()}</div>
           </form>
         </div>
-          
       </div>
     )
   }

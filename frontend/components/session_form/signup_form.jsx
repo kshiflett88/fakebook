@@ -90,6 +90,7 @@ class SignupForm extends React.Component {
                   onChange={this.handleInput("password")} />
             
               <button className='signup-form-btn'>create user</button>
+              
             <div className="render-errors">{this.renderErrors()}</div>
             </form>
 
