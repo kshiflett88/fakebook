@@ -1,21 +1,22 @@
 import React from "react";
-import GreetingContainer from './greeting/greeting_container';
+import NavBar from './navbar/navbar_container';
 import SignupContainer from './session_form/signup_form_container';
 import LoginContainer from './session_form/login_form_container';
-import { Route, Link } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
-// comment here
+import { Route, Link, Redirect } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute  } from '../util/route_util';
+import UserShowContainer from './user/user_show_container';
+import UserIndexContainer from './user/user_index_container';
 const App = () => (
   <div>
     <div className="home-container">
      
       <AuthRoute path="/" component={LoginContainer} />
-      <GreetingContainer />
+      <AuthRoute path="/signup" component={SignupContainer} />
+      <NavBar />
+      <ProtectedRoute exact path="/users" component={UserIndexContainer} />
+      <ProtectedRoute path="/users/:id" component={UserShowContainer}/>
 
     </div>
-    <body>
-      <AuthRoute path="/signup" component={SignupContainer} />
-    </body>
     
   </div>
 );

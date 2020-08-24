@@ -33,7 +33,7 @@ class SignupForm extends React.Component {
     this.setState({username: ""});
     this.setState({ password: "" });
     this.setState({ email: "" });
-    this.props.processForm(user).then(() => this.props.history.push('/'));
+    this.props.processForm(user).then(() => this.props.history.push('/users'));
   }
 
   renderErrors() {
@@ -60,7 +60,7 @@ class SignupForm extends React.Component {
                   <h2 className='signup-form-header-title'>Sign Up</h2>
                   <p className="signup-form-header-p">It's quick and easy!</p>
                 </div>
-                <Link className="signup-form-x" to='/'>X</Link>
+                <Link className="signup-form-x" to='/users/2'>X</Link>
               </header>
               <div className="signup-header-border-bottom"></div>
               
@@ -90,7 +90,7 @@ class SignupForm extends React.Component {
                   onChange={this.handleInput("password")} />
             
               <button className='signup-form-btn'>create user</button>
-              
+
             <div className="render-errors">{this.renderErrors()}</div>
             </form>
 

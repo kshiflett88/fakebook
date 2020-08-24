@@ -8,7 +8,6 @@ class LoginForm extends React.Component {
     this.state = {
       username: "",
       password: "",
-      email: ""
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -30,9 +29,10 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     const user = Object.assign({}, this.state)
-    this.setState({ username: "" });
-    this.setState({ password: "" });
-    this.props.processForm(user).then(() => this.props.history.push('/'));
+    // this.setState({ username: "" });
+    // this.setState({ password: "" });
+    // this.props.processForm(user).then(() => this.props.history.push(`/users/`));
+    this.props.processForm(user).then((res) => this.props.history.push(`/users/${res.user.id}`));
   }
 
   renderErrors() {
@@ -49,9 +49,10 @@ class LoginForm extends React.Component {
     )
   }
 
-  handleDemoUser() {
+  handleDemoUser(e) {
+    e.preventDefault()
     const demoUser = {username: "Kreator", password: "123456"}
-    this.props.processForm(demoUser)
+    this.props.processForm(demoUser).then((res) => this.props.history.push(`/users/${res.user.id}`));
 
   }
 
@@ -82,6 +83,7 @@ class LoginForm extends React.Component {
                 placeholder="Password"
                 value={this.state.password}
                 onChange={this.handleInput("password")} />
+            <br />
             
             <button className='btn login-form-btn'>Log In</button>
             <button className='btn login-form-btn demo-user' onClick={this.handleDemoUser}>Demo User</button>

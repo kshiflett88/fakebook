@@ -1,3 +1,4 @@
+import { $CombinedState } from "redux"
 
 
 export const postUser = (user) => {
@@ -22,3 +23,29 @@ export const deleteSession = () => {
     method: "DELETE"
   })
 }
+
+export const fetchUsers = ()  => {
+  return $.ajax({
+    url: "/api/users",
+    method: "GET"
+  })
+}
+
+export const updateUser = (user) => {
+  return $.ajax({
+    url: `/api/users/${user.id}`,
+    method: 'PATCH',
+    data: { user }
+  })
+}
+
+export const updateUserPhoto = (userId, photo) => {
+  return $.ajax({
+    url: `/api/users/${userId}`,
+    method: 'PATCH',
+    data: photo,
+    contentType: false, 
+    processData: false
+  })
+}
+

@@ -1,11 +1,18 @@
 import * as SessionAPIUtil from '../util/session_api_util'
-
+export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER ='LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
+// export const 
 
 //reg actions
+const receiveAllUsers = (users) => {
+  return {
+    type: RECEIVE_ALL_USERS,
+    users
+  }
+}
 
 const receiveCurrentUser = (user) => {
   return {
@@ -33,28 +40,50 @@ export const clearSessionErrors = () => {
   }
 }
 
+// 
+
+
 //Thunks 
+export const requestUsers = () => (dispatch) => {
+  return SessionAPIUtil.fetchUsers()
+  .then((users) => {
+    return dispatch(receiveAllUsers(users))
+  })
+}
+
 export const login = (user) => (dispatch) => {
   return SessionAPIUtil.postSession(user)
   .then((user) => {
-    dispatch(receiveCurrentUser(user))
+    return dispatch(receiveCurrentUser(user))
   }).fail((errors) => {
-    dispatch(receiveSessionErrors(errors.responseJSON))
+    return dispatch(receiveSessionErrors(errors.responseJSON))
   })
 }
 
 export const signup = (user) => (dispatch) => {
   return SessionAPIUtil.postUser(user).then((user) => {
-    dispatch(receiveCurrentUser(user))
+    return dispatch(receiveCurrentUser(user))
   }).fail((errors) => {
-    dispatch(receiveSessionErrors(errors.responseJSON))
+    return dispatch(receiveSessionErrors(errors.responseJSON))
   })
 }
 
 export const logout = () => (dispatch) => {
   return SessionAPIUtil.deleteSession().then((user) => {
-    dispatch(logoutCurrentUser())
+   return dispatch(logoutCurrentUser())
   }).fail((errors) => {
-    dispatch(receiveSessionErrors(errors))
+    return dispatch(receiveSessionErrors(errors))
+  })
+}
+
+export const updateUser = (user) => (dispatch) => {
+  return SessionAPIUtil.updateUser(user).then((user) => {
+    return dispatch(receiveCurrentUser(user))
+  })
+}
+
+export const updateUserPhoto = (userId, photo) => (dispatch) => {
+  return SessionAPIUtil.updateUserPhoto(userId, photo).then((user) => {
+    return dispatch(receiveCurrentUser(user))
   })
 }

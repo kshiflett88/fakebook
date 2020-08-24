@@ -1,0 +1,67 @@
+.cover-photo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cover-photo-btn {
+position: relative;
+justify-content: center;
+}
+
+#cover-image {
+  display: none;
+}
+
+
+.cover-photo {
+border-radius: 8px;
+height: 340px;
+margin-left: 30px;
+width: 900px;
+box-shadow: 2px 2px 8px gray;
+
+}
+
+.add-cover-photo {
+position: absolute;
+font-family: sans-serif;
+top: 270px;
+right: 50px;
+background-color: rgb(209, 212, 209);
+padding: 8px;
+border-radius: 8px;
+
+
+}
+
+.add-photo:hover {
+  background-color: rgb(157, 157, 157);
+  
+}
+
+.profile-photo {
+  position: absolute;
+  width: 180px;
+  height: 150px;
+  top: 200px;
+  left: 350px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+#profile-image {
+  display: none;
+}
+
+.add-profile-photo {
+  position: absolute;
+  font-family: sans-serif;
+  left: 500px;
+  bottom: 2px;
+  font-size: 20px;
+  background-color: rgb(209, 212, 209);
+  padding: 6px;
+  border-radius: 8px;
+  z-index: 1 !important;
+  border-radius: 50%;
+}

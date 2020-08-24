@@ -1,0 +1,168 @@
+.navbar-mid {
+  display: flex;
+  /* position: relative; */
+}
+
+
+.home {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: rgb(221, 221, 221);
+  background-color: rgb(27, 27, 27, 0.9);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-left: 34px;
+  margin-top: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.drop-home {
+  pointer-events: none
+}
+
+.dropdown:hover .home {
+  display: block;
+}
+
+.tv {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 13px;
+  color: rgb(221, 221, 221);
+  background-color: rgb(27, 27, 27, 0.9);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-left: 33px;
+  margin-top: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .tv {
+  display: block;
+}
+
+.store {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: rgb(221, 221, 221);
+  background-color: rgb(27, 27, 27, 0.9);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-left: 18px;
+  margin-top: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .store {
+  display: block;
+}
+
+.groups {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: rgb(221, 221, 221);
+  background-color: rgb(27, 27, 27, 0.9);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-left: 32px;
+  margin-top: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .groups {
+  display: block;
+}
+
+.gaming {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: rgb(221, 221, 221);
+  background-color: rgb(27, 27, 27, 0.9);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-left: 30px;
+  margin-top: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .gaming {
+  display: block;
+}
+
+.fa-home {
+color: gray;
+padding: 5px 40px;
+font-size: 36px;
+margin: 0 5px;
+margin-top: 10px;
+}
+
+
+.fa-tv {
+  color: gray;
+  padding: 5px 40px;
+  font-size: 36px;
+  margin: 0 5px;
+}
+
+.fa-store {
+  color: gray;
+  padding: 5px 40px;
+  font-size: 36px;
+  margin: 0 5px;
+}
+
+.fa-users {
+  color: gray;
+  padding: 5px 40px;
+  font-size: 36px;
+  margin: 0 5px;
+}
+.fa-gamepad {
+  color: gray;
+  padding: 5px 40px;
+  font-size: 36px;
+  margin: 0 5px;
+}
+
+.fa-home:hover {
+  background-color: rgb(237, 238, 241);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.fa-tv:hover {
+  background-color: rgb(237, 238, 241);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.fa-store:hover {
+  background-color: rgb(237, 238, 241);
+  border-radius: 8px;
+  cursor: pointer; 
+}
+
+.fa-users:hover {
+  background-color: rgb(237, 238, 241);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.fa-gamepad:hover {
+  background-color: rgb(237, 238, 241);
+  border-radius: 8px;
+  cursor: pointer;
+}
