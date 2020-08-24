@@ -10,7 +10,7 @@ class UserShow extends React.Component {
       profilePhotoFile: null
     }
 
-    this.photoUpload = React.createRef();
+    this.photoCoverUpload = React.createRef();
     this.handleCoverFile = this.handleCoverFile.bind(this);
     this.coverHandleSubmit = this.coverHandleSubmit.bind(this);
     this.showPhotoUpload = this.showPhotoUpload.bind(this);
@@ -61,7 +61,7 @@ profileHandleSubmit(e) {
 
 
   showPhotoUpload() {
-    this.photoUpload.current.click();
+    this.photoCoverUpload.current.click();
   }
   
 
@@ -72,7 +72,7 @@ profileHandleSubmit(e) {
     return(
       <div className='cover-photo-container'>
         <div className='cover-photo-btn'>
-          <input id="cover-image" type="file" ref={this.photoUpload}
+          <input id="cover-image" type="file" ref={this.photoCoverUpload}
           onChange={this.handleCoverFile}></input>
           <button className="add-cover-photo" onClick={this.showPhotoUpload}> <FaCamera/> {user.cover_photo ? "Edit " : "Add "}Cover Photo </button>
 
@@ -85,15 +85,8 @@ profileHandleSubmit(e) {
           {<img className="profile-photo" src={user.profile_photo} />}
        
         </div>
-        
-        
-        
-        
-        
-        
-        
-        <p>{user.username}</p>
-
+      
+        <h2 className="profile-username">{user.username}</h2>
 
       </div>
     )
