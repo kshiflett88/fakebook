@@ -1,4 +1,8 @@
 import React from 'react'
+import UserShowContainer from './user_show_container';
+import { Route, Link, Redirect } from 'react-router-dom';
+import { AuthRoute } from '../../util/route_util'
+// import FriendRequestButton from './friend_request_button';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -8,7 +12,10 @@ class UserProfile extends React.Component {
   render() {
     return (
       <div>
-        <h2>{this.props.currentUser.username}</h2>
+        {/* <Route exact path="/users/:id" component={UserShowContainer} /> */}
+        {/* Kodi - todo */}
+        <UserShowContainer /> 
+        
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebookMessenger, FaBell, FaCaretDown, FaPlus, FaSearch, FaHome, FaTv, FaStore, FaUsers, FaGamepad} from 'react-icons/fa';
+import { FaFacebookMessenger, FaBell, FaCaretDown, FaPlus, FaHome, FaTv, FaStore, FaUsers, FaGamepad} from 'react-icons/fa';
 
 class NavBar extends React.Component {
   constructor(props) {

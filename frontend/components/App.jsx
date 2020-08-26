@@ -6,6 +6,9 @@ import { Route, Link, Redirect } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute  } from '../util/route_util';
 import UserShowContainer from './user/user_show_container';
 import UserIndexContainer from './user/user_index_container';
+import ProfileContainer from './user/user_profile_container';
+// import RequestButtonContainer from './user/friend_request_button_container'
+
 const App = () => (
   <div>
     <div className="home-container">
@@ -15,7 +18,7 @@ const App = () => (
       <NavBar />
       <ProtectedRoute exact path="/users" component={UserIndexContainer} />
       <ProtectedRoute path="/users/:id" component={UserShowContainer}/>
-
+      
     </div>
     
   </div>

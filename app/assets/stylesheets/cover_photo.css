@@ -1,6 +1,14 @@
+.container-all {
+  /* border-bottom: 1px solid gray; */
+  height: 510px;
+  box-shadow: 1px 1px 8px gray;
+}
+
+
 .cover-photo-container {
   display: flex;
   justify-content: center;
+  
 }
 
 .cover-photo-btn {
@@ -72,4 +80,87 @@ border-radius: 8px;
   font-family: sans-serif;
   font-size: 30px;
   font-weight: 600;
+}
+
+.profile-border {
+  position: absolute;
+  top: 500px;
+  width: 850px;
+  border-bottom: 1px solid gray;
+}
+
+.profile-bar {
+  position: absolute;
+  display: flex;
+  
+  top: 510px;
+}
+
+.profile-bar > .basic {
+  font-size: 20px;
+  font-family: sans-serif;
+  padding: 10px 12px;
+  color: gray;
+  
+}
+
+.profile-bar > p:hover {
+  background-color: rgb(237, 238, 241);
+  border-radius: 8px;
+}
+
+
+
+#edit-profile {
+  color: black;
+  background-color: rgb(220, 219, 219);
+  border-radius: 8px;
+  font-size: 20px;
+  font-family: sans-serif;
+  padding: 10px 12px;
+  margin: 0 4px 0 25px;
+  
+}
+
+#eye {
+  color: black;
+  background-color: rgb(220, 219, 219);
+  border-radius: 8px;
+  font-size: 20px;
+  margin: 0 4px;
+  padding: 10px 12px;
+}
+
+#search {
+  color: black;
+  background-color: rgb(220, 219, 219);
+  border-radius: 8px;
+  font-size: 20px;
+  margin: 0 4px;
+  padding: 10px 12px;
+}
+
+#dots {
+  color: black;
+  background-color: rgb(220, 219, 219);
+  border-radius: 8px;
+  font-size: 20px;
+  margin: 0 4px;
+  padding: 5px 12px;
+}
+
+#edit-profile:hover {
+  background-color: rgb(199, 198, 198);
+}
+
+#eye:hover {
+  background-color: rgb(199, 198, 198);   
+}
+
+#search:hover {
+  background-color: rgb(199, 198, 198);
+}
+
+#dots:hover {
+  background-color: rgb(199, 198, 198);
 }

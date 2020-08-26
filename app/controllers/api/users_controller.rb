@@ -1,11 +1,12 @@
 class Api::UsersController < ApplicationController
   before_action :require_logged_out, only: [:create]
-  before_action :require_logged_in, only: [:show, :update, :index]
+  before_action :require_logged_in, only: [:show, :update, :index, :edit]
   
     def index
-    @users = User.all 
-    render :index
-  end 
+      @users = User.all 
+      
+      render :index
+    end 
 
   def create 
     @user = User.new(user_params)
@@ -34,6 +35,7 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
+    
     render :show
   end
 

@@ -2,7 +2,7 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
+#  id              :bigint           not null, primary key
 #  username        :string           not null
 #  email           :string           not null
 #  password_digest :string           not null
@@ -20,6 +20,34 @@ class User < ApplicationRecord
 
   has_one_attached :cover_photo
   has_one_attached :profile_photo
+
+  has_many :sent_friend_requests, 
+    foreign_key: :requester_id,
+    class_name: :FriendRequest
+
+    has_many :incoming_friend_requests, 
+        foreign_key: :requestee_id,
+        class_name: :FriendRequest
+    
+    has_many :requesters, 
+        through: :incoming_friend_requests,
+        source: :requester
+
+    has_many :requestees,
+        through: :sent_friend_requests,
+        source: :requestee
+        
+    # has_many :requestees, 
+    #     through: :sent_friend_requests,
+    #     source: :requestee
+
+    has_many :friendships, 
+        foreign_key: :friend_one_id,
+        class_name: :Friendship
+
+    has_many :friends, 
+        through: :friendships,
+        source: :friend_two
 
    def self.find_by_credentials(username, password)
         user = User.find_by(username: username)

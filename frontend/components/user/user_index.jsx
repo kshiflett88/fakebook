@@ -14,7 +14,7 @@ class UserIndex extends React.Component {
 
   render() {
     const { users } = this.props;
-    // debugger
+    
     return(
       <div>
         <ul>

@@ -1,18 +1,17 @@
-import * as SessionAPIUtil from '../util/session_api_util'
-export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
-export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
+import * as SessionAPIUtil from '../util/session_api_util';
+import * as FriendRequestAPIUtil from '../util/friend_request_api_util';
+import * as FriendshipAPIUtil from '../util/friendship_api_util';
+
+// export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
+export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER'; 
 export const LOGOUT_CURRENT_USER ='LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
-// export const 
+// export const RECEIVE_USER = 'RECEIVE_USER';
+ 
 
 //reg actions
-const receiveAllUsers = (users) => {
-  return {
-    type: RECEIVE_ALL_USERS,
-    users
-  }
-}
+
 
 const receiveCurrentUser = (user) => {
   return {
@@ -44,12 +43,6 @@ export const clearSessionErrors = () => {
 
 
 //Thunks 
-export const requestUsers = () => (dispatch) => {
-  return SessionAPIUtil.fetchUsers()
-  .then((users) => {
-    return dispatch(receiveAllUsers(users))
-  })
-}
 
 export const login = (user) => (dispatch) => {
   return SessionAPIUtil.postSession(user)
@@ -76,14 +69,3 @@ export const logout = () => (dispatch) => {
   })
 }
 
-export const updateUser = (user) => (dispatch) => {
-  return SessionAPIUtil.updateUser(user).then((user) => {
-    return dispatch(receiveCurrentUser(user))
-  })
-}
-
-export const updateUserPhoto = (userId, photo) => (dispatch) => {
-  return SessionAPIUtil.updateUserPhoto(userId, photo).then((user) => {
-    return dispatch(receiveCurrentUser(user))
-  })
-}

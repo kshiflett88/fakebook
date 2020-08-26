@@ -86,6 +86,7 @@ class LoginForm extends React.Component {
             <br />
             
             <button className='btn login-form-btn'>Log In</button>
+            
             <button className='btn login-form-btn demo-user' onClick={this.handleDemoUser}>Demo User</button>
             <div id="border"></div>
             <Link className="login-form-signup-btn" to="/signup">Create New Account</Link>

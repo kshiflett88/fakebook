@@ -1,16 +1,18 @@
-import { RECEIVE_CURRENT_USER, RECEIVE_ALL_USERS } from "../actions/session_actions"
+import { RECEIVE_CURRENT_USER } from "../actions/session_actions"
+import { RECEIVE_USER, RECEIVE_ALL_USERS } from '../actions/user_actions'
 
-const usersReducer = (oldState = {}, action) => {
-  Object.freeze(oldState)
+const usersReducer = (state = {}, action) => {
+  Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_ALL_USERS:
-      return Object.assign({}, action.users)
     case RECEIVE_CURRENT_USER:
-      let newState = Object.assign({}, oldState, { [action.user.id]: action.user})
-      return newState
+      return Object.assign({}, state, { [action.user.id]: action.user });
+    case RECEIVE_USER:
+      return Object.assign({}, state, { [action.user.id]: action.user });
+    case RECEIVE_ALL_USERS:
+      return Object.assign({}, state, action.users);
     default:
-     return oldState;
+      return state;
   }
-}
+};
 
 export default usersReducer;
