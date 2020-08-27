@@ -6,6 +6,7 @@ class Api::FriendRequestsController < ApplicationController
     
     if requester_id == current_user.id 
       @friend_request = FriendRequest.new(requester_id: requester_id, requestee_id: requestee_id)
+    
       if @friend_request.save
         @user = current_user
         render 'api/users/show_current'
@@ -20,7 +21,8 @@ class Api::FriendRequestsController < ApplicationController
 
   def destroy 
     requester_id, requestee_id = params[:requester_id].to_i, params[:requestee_id].to_i
-    if requester_id == current_user.id 
+    if ( requester_id == current_user.id || current_user.id == requestee_id )
+      # debugger
       @friend_request = FriendRequest.find_by(requester_id: requester_id, requestee_id: requestee_id)
       if @friend_request
         @friend_request.destroy

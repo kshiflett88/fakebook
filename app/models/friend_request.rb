@@ -11,7 +11,7 @@
 #
 class FriendRequest < ApplicationRecord
   validates :requestee_id, :requester_id, presence: true
-  validates :requester_id, uniqueness: { scope: :requestee_id} 
+  # validates :requester_id, uniqueness: { scope: :requestee_id} 
       
 
   belongs_to :requestee,

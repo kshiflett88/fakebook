@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.id],
     user: state.entities.users[ownProps.match.params.id],
-   
+    
   }
 }
 const mapDispatchToProps = (dispatch) => ({

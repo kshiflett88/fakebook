@@ -3,6 +3,8 @@ import GreetingContainer from '../navbar/navbar'
 import { FaCamera, FaPencilAlt, FaEye, FaSearch } from 'react-icons/fa';
 import UserProfile from './user_profile';
 import FriendRequest from './friend_request';
+import FriendRequestAcceptDelete from './friend_request_accept_decline'
+import FriendList from './friend_list';
 
 class UserShow extends React.Component {
   constructor(props) {
@@ -24,6 +26,12 @@ class UserShow extends React.Component {
 
   componentDidMount() {
     this.props.requestUser(this.props.match.params.id);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.user.friends.length !== this.props.user.friends.length) {
+      this.props.requestUser(this.props.match.params.id)
+    }
   }
 
 handleCoverFile(e) {
@@ -79,7 +87,7 @@ profilePhotoUpload() {
 
   render() {
     if (!this.props.user) return null
-    const {user} = this.props;
+    const {user, users} = this.props;
     return(
       <div className="container-all">
         <div className='cover-photo-container'>
@@ -120,7 +128,26 @@ profilePhotoUpload() {
             <p id="search"><FaSearch /></p>
             <p id="dots">...</p>
           </div>
-         
+        </div>
+        <div className="friend-container">
+
+          <FriendList className="friend-list"
+            users={users}
+            user={user}
+            currentUser={this.props.currentUser}
+            />
+            
+            <br />
+
+          <FriendRequestAcceptDelete 
+            deleteFriendRequest={this.props.deleteFriendRequest}
+            addFriendship={this.props.addFriendship}
+            deleteFriendship={this.props.deleteFriendship}
+            requestUser={this.props.requestUser}
+            user={user}
+            currentUser={this.props.currentUser}
+            />
+
         </div>
       </div>
     )

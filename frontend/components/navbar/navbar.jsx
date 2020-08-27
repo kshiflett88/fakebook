@@ -9,7 +9,19 @@ class NavBar extends React.Component {
 
  
 
+
   render() {
+
+    const caratDrop = React.createRef();
+    
+
+    const unhideDropdown = (ref) => {
+      return () => {
+        ref.current.classList.toggle("show-dropdown");
+        // icon.current.classList.toggle("selected");
+      };
+    }
+
     return (
       <div className='greeting-container'>
 
@@ -62,11 +74,14 @@ class NavBar extends React.Component {
               <i className="fa-message"><FaFacebookMessenger/></i>
               <i className="fa-bell"><FaBell/></i>
               
+
               <div className="dropdown">
-                <i className="dropbtn"><FaCaretDown/></i>
-                <div className="dropdown-content">
+                <button className="dropbtn" onClick={unhideDropdown(caratDrop)}><FaCaretDown />
+                  </button>
+                <div ref={caratDrop} id="myDropdown" className="dropdown-content">
                   <button className="greeting-logout-btn" onClick={this.props.logout}>Log Out</button>
                 </div>
+
               </div>
 
             </div>

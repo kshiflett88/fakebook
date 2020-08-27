@@ -2,6 +2,8 @@
   /* border-bottom: 1px solid gray; */
   height: 510px;
   box-shadow: 1px 1px 8px gray;
+  min-width: 900px;
+  /* max-width: 1300px; */
 }
 
 
@@ -90,6 +92,8 @@ border-radius: 8px;
 }
 
 .profile-bar {
+  min-width: 900px;
+  max-width: 1300px;
   position: absolute;
   display: flex;
   

@@ -7,7 +7,8 @@ import { AuthRoute, ProtectedRoute  } from '../util/route_util';
 import UserShowContainer from './user/user_show_container';
 import UserIndexContainer from './user/user_index_container';
 import ProfileContainer from './user/user_profile_container';
-// import RequestButtonContainer from './user/friend_request_button_container'
+
+
 
 const App = () => (
   <div>

@@ -1,0 +1,32 @@
+.request-list {
+  display: flex;
+  width: 200px;
+  margin-left: 10px;
+  box-shadow: 1px 1px 8px gray;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.requester-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.add-friend {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 8px;
+  background-color: chartreuse;
+}
+
+.deny-friend {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 8px;
+  background-color: crimson;
+}
+

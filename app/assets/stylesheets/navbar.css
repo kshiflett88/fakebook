@@ -101,15 +101,20 @@
   color: black;
   display: block;
   z-index: 1 !important;
+  width: 140px;
 }
 
 .dropdown-content button:hover {
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
   display: block;
   z-index: 1 !important;
+} */
+
+.show-dropdown {
+  display: block;
 }
 
 .dropdown:hover .dropbtn {
