@@ -39,9 +39,10 @@ class Api::FriendshipsController < ApplicationController
     elsif !(@friendship1 && @friendship2)
       render json: ["No existing friendship"]
     else
-      debugger
+      @user = current_user
       @friendship1.destroy
       @friendship2.destroy
+
       render 'api/users/show_current'
     end
   end 

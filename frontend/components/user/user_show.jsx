@@ -98,7 +98,7 @@ profilePhotoUpload() {
   render() {
     if (!this.props.user) return null
     const {user, currentUser, users, requestUser} = this.props;
-
+    // if ( !user.profile_photo ? user.profile_photo = "/app/assets/images/default-profile-picture.jpg" : user.profile_photo )
     return(
       <div className="container-all">
         <div className='cover-photo-container'>

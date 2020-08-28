@@ -11,12 +11,14 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
-  validates :username, :email, :password_digest, presence: true
-  validates :username, :email, uniqueness: true
-  validates :password, length: {minimum: 6, allow_nil: true}
-
-  attr_reader :password
-  after_initialize :ensure_session_token
+    validates :username, :email, :password_digest, presence: true
+    validates :username, :email, uniqueness: true
+    validates :password, length: {minimum: 6, allow_nil: true}
+    
+    attr_reader :password
+    after_initialize :ensure_session_token
+    after_initialize :ensure_session_token, :ensure_user_photo
+    after_initialize :ensure_session_token, :ensure_cover_photo
 
   has_one_attached :cover_photo
   has_one_attached :profile_photo
@@ -53,6 +55,23 @@ class User < ApplicationRecord
         foreign_key: :wall_id,
         class_name: :Post 
     
+
+   def ensure_user_photo
+        file = File.open('app/assets/images/default-profile-picture.jpg')
+        if !self.profile_photo.attached? 
+        self.profile_photo.attach(io: file, filename: 'default-profile-picture.jpg')
+        end
+    end
+
+
+    def ensure_cover_photo
+        file = File.open('app/assets/images/demo-image-default.jpg')
+        if !self.cover_photo.attached? 
+        self.cover_photo.attach(io: file, filename: 'demo-image-default.jpg')
+        end
+    end
+
+
 
    def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
