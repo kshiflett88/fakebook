@@ -5,6 +5,8 @@ import UserProfile from './user_profile';
 import FriendRequest from './friend_request';
 import FriendRequestAcceptDelete from './friend_request_accept_decline'
 import FriendList from './friend_list';
+import WallPostIndexContainer from '../post/wall_post_index_container'
+import WallPostFormContainer from '../post/wall_post_form_container'
 
 class UserShow extends React.Component {
   constructor(props) {
@@ -26,12 +28,20 @@ class UserShow extends React.Component {
 
   componentDidMount() {
     this.props.requestUser(this.props.match.params.id);
+  
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.user.friends.length !== this.props.user.friends.length) {
       this.props.requestUser(this.props.match.params.id)
     }
+    if (prevProps.user.requestees.length !== this.props.user.requestees.length) {
+      this.props.requestUser(this.props.match.params.id)
+    }
+    if (prevProps.user.requesters.length !== this.props.user.requesters.length) {
+      this.props.requestUser(this.props.match.params.id)
+    }
+
   }
 
 handleCoverFile(e) {
@@ -87,7 +97,8 @@ profilePhotoUpload() {
 
   render() {
     if (!this.props.user) return null
-    const {user, users} = this.props;
+    const {user, currentUser, users, requestUser} = this.props;
+
     return(
       <div className="container-all">
         <div className='cover-photo-container'>
@@ -118,6 +129,7 @@ profilePhotoUpload() {
             <p className="basic">Archive</p>
             <p className="basic">More</p>
             <FriendRequest id="edit-profile" 
+              requestUser={requestUser}
               createFriendRequest={this.props.createFriendRequest}
               deleteFriendRequest={this.props.deleteFriendRequest}
               addFriendship={this.props.addFriendship}
@@ -130,24 +142,32 @@ profilePhotoUpload() {
           </div>
         </div>
         <div className="friend-container">
+          <div className="left-profile">
 
-          <FriendList className="friend-list"
-            users={users}
-            user={user}
-            currentUser={this.props.currentUser}
-            />
-            
-            <br />
+            <FriendList className="friend-list"
+              requestUser={requestUser}
+              users={users}
+              user={user}
+              currentUser={this.props.currentUser}
+              />
+              
+              <br />
 
-          <FriendRequestAcceptDelete 
-            deleteFriendRequest={this.props.deleteFriendRequest}
-            addFriendship={this.props.addFriendship}
-            deleteFriendship={this.props.deleteFriendship}
-            requestUser={this.props.requestUser}
-            user={user}
-            currentUser={this.props.currentUser}
-            />
+            <FriendRequestAcceptDelete 
+              
+              deleteFriendRequest={this.props.deleteFriendRequest}
+              addFriendship={this.props.addFriendship}
+              deleteFriendship={this.props.deleteFriendship}
+              requestUser={requestUser}
+              user={user}
+              currentUser={this.props.currentUser}
+              />
+            </div>
 
+          <div className="wall-posts">
+            <WallPostFormContainer />
+            <WallPostIndexContainer />
+          </div>
         </div>
       </div>
     )

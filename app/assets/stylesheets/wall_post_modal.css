@@ -1,0 +1,62 @@
+.post-form {
+  display: flex;
+  position: relative;
+  left: 350px;
+  flex-direction: column;
+  align-content: center;
+  box-shadow: 1px 1px 8px gray;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: white;
+  
+}
+
+.post-form-body{
+  /* background-color: rgb(228, 7, 7); */
+}
+
+.post-form-img-container{
+
+}
+
+.post-form-img{
+
+}
+
+.post-form-submit-btn {
+  font-size: 24px;
+  align-self: center;
+  background-color: rgb(72, 172, 253);
+  padding: 5px 75px;
+  border-radius: 8px;
+}
+
+.react-responsive-modal-overlay {
+  display: flex;
+  /* background-color: cyan; */
+}
+
+.react-responsive-modal-modal {
+  display: flex;
+  width: 300px;
+  /* background-color: rgb(66, 14, 165); */
+}
+
+.react-responsive-modal-modalCenter {
+  flex-direction: column;
+  display: flex;
+  /* background-color: rgb(199, 99, 17); */
+}
+
+
+.react-responsive-modal-closeButton {
+  position: relative;
+  top: 50px;
+  left: 300px;
+  /* background-color: rgb(218, 28, 28); */
+}
+
+ /* overlay: 'react-responsive-modal-overlay',
+        modal: 'react-responsive-modal-modal post-form-modal',
+        modalCenter: 'react-responsive-modal-modalCenter',
+        closeButton: 'react-responsive-modal-closeButton post-form-modal-btn', */

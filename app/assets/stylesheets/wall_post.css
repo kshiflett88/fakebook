@@ -1,0 +1,50 @@
+.post-index-container {
+
+}
+
+.post-index-item-container {
+  /* position: relative; */
+  bottom: 10px;
+  left: 500px;
+  width: 410px;
+  box-shadow: 1px 1px 8px gray;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+
+.post-index-item-body{
+
+}
+
+.delete-post-btn {
+ position: relative;
+ left: 270px;
+}
+
+.post-index-item-author-information {
+  display: flex;
+  
+  
+  
+}
+
+.post-index-item-author-img-container{
+  
+}
+
+.img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.post-index-item-author-name {
+  padding: 0 5px;
+}
+
+.post-index-item-body-text {
+  font-family: sans-serif;
+  font-size: 20px;
+}

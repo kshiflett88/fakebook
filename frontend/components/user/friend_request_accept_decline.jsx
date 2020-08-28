@@ -8,7 +8,7 @@ class FriendRequestAcceptDelete extends React.Component {
   }
 
   render() {
-    const { user, currentUser } = this.props;
+    const { user, currentUser, requestUser } = this.props;
    
     return (
       <div>
@@ -17,6 +17,7 @@ class FriendRequestAcceptDelete extends React.Component {
             return <FriendRequestIndexItem 
             key={requester.id} 
             user={user}
+            requestUser={requestUser}
             requester={requester}
             currentUser={currentUser}
             deleteFriendRequest={this.props.deleteFriendRequest}

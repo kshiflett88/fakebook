@@ -14,7 +14,7 @@
 }
 
 .search-bar { 
-  background-color: rgb(237, 238, 241);;
+  background-color: rgb(237, 238, 241);
   border-radius: 35px;
   height: 70%;
   width: 250px;
@@ -106,6 +106,7 @@
 
 .dropdown-content button:hover {
   background-color: #ddd;
+  border-radius: 8px;
 }
 
 /* .dropdown:hover .dropdown-content {
@@ -115,8 +116,72 @@
 
 .show-dropdown {
   display: block;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+}
+
+#user-name {
+  font-family: sans-serif;
+  font-size: 20px;
+
+}
+
+#syp {
+  font-family: sans-serif;
+  color: rgb(184, 183, 183);
 }
 
 .dropdown:hover .dropbtn {
   color: #1e68ca;
+}
+
+.dropdown-profile-link {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-profile-dp {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.dropdown-profile-photo {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.nav-bar-pfp {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+}
+
+.navbar-profile-link {
+  width: 110px;
+  /* background-color: aqua; */
+  border-radius: 20px;
+  /* display: flex; */
+  flex-direction: row;
+}
+
+.navbar-prp-link {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+  /* padding-left: 3px; */
+  /* margin-right: 8px; */
+}
+
+.navbar-prp-link:hover {
+  border-radius: 20px;
+  background-color: rgb(224, 224, 224);
+}
+
+.navbar-username {
+  margin-top: 8px;
+  font-family: sans-serif;
 }

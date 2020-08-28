@@ -15,7 +15,7 @@ class Api::FriendshipsController < ApplicationController
 
       if @friendship1.save && @friendship2.save
           friend_request.destroy
-          @user = User.find(1)
+          @user = current_user
           render 'api/users/show_current'
       else 
         render json: ["Unable to accept friendship"], status: 422
@@ -30,7 +30,7 @@ class Api::FriendshipsController < ApplicationController
 
   def destroy
     friend_one_id, friend_two_id = params[:friend_one_id].to_i, params[:friend_two_id].to_i
-    # debugger
+    
     @friendship1 = Friendship.find_by(friend_one_id: friend_one_id, friend_two_id: friend_two_id)
     @friendship2 = Friendship.find_by(friend_one_id: friend_two_id, friend_two_id: friend_one_id)
 
@@ -39,6 +39,7 @@ class Api::FriendshipsController < ApplicationController
     elsif !(@friendship1 && @friendship2)
       render json: ["No existing friendship"]
     else
+      debugger
       @friendship1.destroy
       @friendship2.destroy
       render 'api/users/show_current'

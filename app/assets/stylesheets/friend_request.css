@@ -1,10 +1,13 @@
 .request-list {
   display: flex;
-  width: 200px;
-  margin-left: 10px;
+  justify-content: space-evenly;
+  width: 300px;
+  margin: 5px 0;
+  margin-left: 8px;
   box-shadow: 1px 1px 8px gray;
   border-radius: 8px;
   padding: 10px;
+
 }
 
 .requester-name {
@@ -18,7 +21,7 @@
   padding: 10px;
   margin: 0 5px;
   border-radius: 8px;
-  background-color: chartreuse;
+  background-color: rgb(24, 142, 251);
 }
 
 .deny-friend {
@@ -27,6 +30,20 @@
   padding: 10px;
   margin: 0 5px;
   border-radius: 8px;
-  background-color: crimson;
+  background-color: rgb(182, 182, 182);
 }
 
+.left-profile {
+  flex-direction: column;
+}
+
+.requester-image {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+
+}
+
+.accept-btns {
+  display: flex;
+}

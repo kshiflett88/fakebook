@@ -11,21 +11,28 @@ class FriendRequest extends React.Component {
     this.handleDeleteFriendship = this.handleDeleteFriendship.bind(this);
   }
 
+componentDidMount() {
+  this.props.requestUser(this.props.user.id);
+}
+  
 
 handleAddRequest(e) {
   e.preventDefault();
   this.props.createFriendRequest(this.props.currentUser.id, this.props.user.id)
+  .then(() => this.props.requestUser(this.props.user.id))
   
 }
 
 handleDeleteRequest(e) {
   e.preventDefault();
   this.props.deleteFriendRequest(this.props.currentUser.id, this.props.user.id)
+  .then(() => this.props.requestUser(this.props.user.id))
 }
 
 handleDeleteFriendship(e) {
   e.preventDefault();
   this.props.deleteFriendship(this.props.currentUser.id, this.props.user.id)
+  .then(() => this.props.requestUser(this.props.user.id))
 }
 
 
@@ -35,7 +42,7 @@ handleDeleteFriendship(e) {
     let buttonText = (<><FaPlus /> Add Friend</>)
     let buttonClick = this.handleAddRequest
 
-    
+  
     user.requesters.forEach(requester => {
       
       // On friends request has been sent

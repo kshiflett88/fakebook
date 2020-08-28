@@ -36,10 +36,6 @@ class User < ApplicationRecord
     has_many :requestees,
         through: :sent_friend_requests,
         source: :requestee
-        
-    # has_many :requestees, 
-    #     through: :sent_friend_requests,
-    #     source: :requestee
 
     has_many :friendships, 
         foreign_key: :friend_one_id,
@@ -48,6 +44,15 @@ class User < ApplicationRecord
     has_many :friends, 
         through: :friendships,
         source: :friend_two
+
+    has_many :authored_posts, 
+        foreign_key: :author_id,
+        class_name: :Post 
+
+    has_many :wall_posts,
+        foreign_key: :wall_id,
+        class_name: :Post 
+    
 
    def self.find_by_credentials(username, password)
         user = User.find_by(username: username)

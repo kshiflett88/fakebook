@@ -20,6 +20,11 @@
    color: red;
  }
 
+ .wall-posts {
+   flex-direction: column;
+   
+ }
+
  
 
  
