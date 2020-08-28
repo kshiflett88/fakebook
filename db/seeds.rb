@@ -16,7 +16,7 @@ u4 = User.create( username: "Chihiro", email: "dragon", password: "123456", auth
 u5 = User.create( username: "Natsu", email: "igneel", password: "123456", authored_post_ids: [p4.id], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
 u6 = User.create( username: "Kocho", email: "butterfly", password: "123456", authored_post_ids: [p5.id], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
 u7 = User.create( username: "Legosi", email: "bunny", password: "123456", authored_post_ids: [p6.id], wall_post_ids: [p6.id], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
-u8 = User.create( username: "Zenitsu", email: "lightening". password: "123456", authored_post_ids: [p7.id], wall_post_ids: [p2.id, p7.id], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
+u8 = User.create( username: "Zenitsu", email: "lightening", password: "123456", authored_post_ids: [p7.id], wall_post_ids: [p2.id, p7.id], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
 
 p1 = Post.create( body: "ASHITAAAAAKKAAA!", author_id: u3.id, wall_id: u1.id )
 p2 = Post.create( body: "Train Harder!" , author_id: u2.id, wall_id: u8.id )
