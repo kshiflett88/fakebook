@@ -27,4 +27,3 @@ p6 = Post.create( body: "I Love you Haru Chan!", author_id: u7.id, wall_id: u7.i
 p7 = Post.create( body: "Nezuko!!!", author_id: u8.id, wall_id: u8.id )
 p8 = Post.create( body: "狼が大好き", author_id: u４.id, wall_id: u３.id )
 p9 = Post.create( body: "Welcome to my app!", author_id: u1.id, wall_id: u1.id )
- ""
