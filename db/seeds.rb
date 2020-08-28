@@ -9,7 +9,7 @@
 User.destroy_all
 Post.destroy_all
 
-u1 = User.create( username: 'Kreator', email: 'kodikreator', password: '123456', authored_post_ids: [], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8f455dca0446878e04704e5c21e63a801126d614/san.jpg", cover_photo: "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBaUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--63480bdf5fb17c5a4facdfcfeee9fde9dd8d24d0/mononoke.jpg" )
+u1 = User.create( username: 'Kreator', email: 'kodikreator', password: '123456', authored_post_ids: [], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "", cover_photo: "" )
 u2 = User.create( username: "Rengoku", email: "fire", password: "123456", authored_post_ids: [], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
 u3 = User.create( username: "San", email: "Moro", password: "123456", authored_post_ids: [], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
 u4 = User.create( username: "Chihiro", email: "dragon", password: "123456", authored_post_ids: [], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
