@@ -9,7 +9,7 @@
 User.destroy_all
 # Post.destroy_all
 
-u1 = User.create( username: 'Kreator', email: 'kodikreator', password: '123456', authored_post_ids: [], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "", cover_photo: "" )
+u1 = User.create( username: 'Kreator', email: 'kodikreator', password: '123456')
 # u2 = User.create( username: "Rengoku", email: "fire", password: "123456", authored_post_ids: [], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
 # u3 = User.create( username: "San", email: "Moro", password: "123456", authored_post_ids: [], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
 # u4 = User.create( username: "Chihiro", email: "dragon", password: "123456", authored_post_ids: [], wall_post_ids: [], requestees: [], requesters: [], profile_photo: "" , cover_photo: "" )
