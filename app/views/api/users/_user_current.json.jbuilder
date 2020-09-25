@@ -1,5 +1,5 @@
 
-json.extract! user, :username, :id, :email, :authored_post_ids, :wall_post_ids
+json.extract! user, :username, :id, :email, :authored_post_ids, :wall_post_ids, :birthday, :gender, :bio, :relationship_status
 json.cover_photo user.cover_photo.attached? ? url_for(user.cover_photo) : ""
 json.profile_photo user.profile_photo.attached? ? url_for(user.profile_photo) : ""
 

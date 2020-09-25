@@ -144,6 +144,10 @@ profilePhotoUpload() {
         <div className="friend-container">
           <div className="left-profile">
 
+            <Bio className="user-bio"
+              user={user}
+            />
+
             <FriendList className="friend-list"
               requestUser={requestUser}
               users={users}

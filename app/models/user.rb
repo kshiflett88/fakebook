@@ -11,7 +11,9 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
-    validates :username, :email, :password_digest, presence: true
+    validates :username, :email, :password_digest, :birthday, :gender, :relationship_status, :bio, presence: true
+    validates :gender, inclusion: {in: ["Male", "Female", "Custom"]}
+    validates :relationship_status, inclusion: {in: ["Single", "In a relationship", "Complicated", "Married", "Engaged"]}
     validates :username, :email, uniqueness: true
     validates :password, length: {minimum: 6, allow_nil: true}
     
