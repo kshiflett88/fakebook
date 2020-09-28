@@ -101,6 +101,22 @@
    background-color: rgb(33, 177, 33);
  }
 
+.gender-signup {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.signup-label {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.signup-radio {
+  font-family: sans-serif; 
+  font-size: 20px; 
+}
+
 
 
  

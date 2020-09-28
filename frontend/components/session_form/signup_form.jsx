@@ -9,7 +9,8 @@ class SignupForm extends React.Component {
     this.state = {
       username: "",
       password: "",
-      email: ""
+      email: "",
+      gender: ""
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -33,6 +34,7 @@ class SignupForm extends React.Component {
     this.setState({username: ""});
     this.setState({ password: "" });
     this.setState({ email: "" });
+    this.setState({gender: ""})
     this.props.processForm(user).then(() => this.props.history.push('/users'));
   }
 
@@ -51,6 +53,7 @@ class SignupForm extends React.Component {
   
 
   render() {
+    
     return (
       <div className="signup-container">
         <div className="signup-form">
@@ -88,7 +91,15 @@ class SignupForm extends React.Component {
                   placeholder="Password"
                   value={this.state.password}
                   onChange={this.handleInput("password")} />
-            
+
+              <br /> 
+              <div className="gender-signup">
+                <span className="signup-label">Gender:</span>
+                <label className="signup-radio"><input type="radio" name="gender" value="Female" onClick={this.handleInput("gender")} />Female</label>
+                <label className="signup-radio"><input type="radio" name="gender" value="Male" onClick={this.handleInput("gender")} />Male</label>
+                <label className="signup-radio"><input type="radio" name="gender" value="Custom" onClick={this.handleInput("gender")} />Custom</label><br />
+              </div>
+
               <button className='signup-form-btn'>create user</button>
 
             <div className="render-errors">{this.renderErrors()}</div>

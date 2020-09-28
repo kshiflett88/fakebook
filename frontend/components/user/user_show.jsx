@@ -7,6 +7,7 @@ import FriendRequestAcceptDelete from './friend_request_accept_decline'
 import FriendList from './friend_list';
 import WallPostIndexContainer from '../post/wall_post_index_container'
 import WallPostFormContainer from '../post/wall_post_form_container'
+import UserBio from './user_bio'
 
 class UserShow extends React.Component {
   constructor(props) {
@@ -97,7 +98,7 @@ profilePhotoUpload() {
 
   render() {
     if (!this.props.user) return null
-    const {user, currentUser, users, requestUser} = this.props;
+    const {user, currentUser, users, requestUser, updateUser} = this.props;
     // if ( !user.profile_photo ? user.profile_photo = "/app/assets/images/default-profile-picture.jpg" : user.profile_photo )
     return(
       <div className="container-all">
@@ -144,8 +145,11 @@ profilePhotoUpload() {
         <div className="friend-container">
           <div className="left-profile">
 
-            <Bio className="user-bio"
+            <UserBio className="user-bio"
               user={user}
+              currentUser={currentUser}
+              updateUser={updateUser}
+              requestUser={requestUser}
             />
 
             <FriendList className="friend-list"

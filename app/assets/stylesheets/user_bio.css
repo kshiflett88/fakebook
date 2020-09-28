@@ -1,465 +1,68 @@
-/* .about-content {
-    background-color: white;
-    border: 1px solid thistle;
-    border-radius: 3px;
+.timeline-intro-content {
+  width: 300px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 8px gray;
+  border-radius: 8px;
+  padding: 10px;
 }
 
-.about-header {
-    padding: 11px 0 7px;
-    border-bottom: 1px solid thistle;
-    background-color: rgb(250, 243, 250);
-    // border-right: 1px solid thistle;
+.timeline-header {
+
 }
 
-.about-logo {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 12px 5px;
-    color: rgb(105, 105, 105);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.timeline-header-text {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px;
 }
 
-.about-logo img {
-    width: 36px;
-    height: 36px;
-    margin-right: 3px;
-}
-
-.about-logo a:hover {
-    text-decoration: underline;
-}
-
-.about-body {
-    margin-top: 0;
-    display: flex;
-    justify-content: flex-start;
-    min-height: 250px;
-}
-
-.about-menu {
-    // border: 5px blue solid;
-    min-width: 247px;
-    border-right: 1px solid thistle;
-    padding: 8px 0;
-}
-
-.about-menu ul {
-    padding: 0;
-    margin: 0;
-}
-
-.about-menu a {
-    padding: 12px 4px 12px 16px;
-    display: block;
+.intro-body {
+    font-family: sans-serif;
     font-size: 14px;
-    color: rgb(105, 105, 105);
 }
 
-.about-body-content {
-    // border: 5px green solid;
-    width: 642px;
-    padding: 15px 24px 0;
+.intro-body-text{
+    font-family: sans-serif;
+    font-size: 18px;
 }
 
-li.selected-section a {
-    font-weight: bold;
-    color: black;
-}
-
-.section-marker {
-    width: 3px;
-    height: 24px;
-    background-color: rgb(105, 105, 105);
-}
-
-li.selected-section {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-li.selected-section a {
-    padding-left: 13px;
-}
-
-li.not-selected-section a:hover {
-    color: black;
-}
-
-// *** Profile About Overview ***
-
-.about-profile-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0 30px;
-
-}
-
-.about-overview-left {
-    width: 328px;
-}
-
-.about-overview-right {
-    width: 204px;
-}
-
-.about-profile-list li {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 14px;
-    border-bottom: 1px solid rgb(253, 242, 253);
-    // border-bottom: 1px solid rgb(240, 212, 240);
-    padding: 0 0 20px;
-}
-
-.about-profile-list li:last-child {
-    border-bottom: none;
-}
-
-// .about-profile-list li:nth-last-child(2) {
-//     // border-bottom: none;
-// }
-
-.about-profile-list li.last-visible {
-    border-bottom: none;
-}
-
-
-.show-icon {
-    min-width: 36px;
-    min-height: 36px;
+.intro-icon {
     font-size: 24px;
-    text-align: center;
-    border-radius: 50%;
-    color: white;
-    background-color: thistle;
-    margin-right: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-right: 5px;
 }
 
-.hide-icon {
-    min-width: 36px;
-    min-height: 36px;
-    font-size: 12px;
-    text-align: center;
-    color: rgb(128, 100, 128);
-    margin-right: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px dashed rgb(128, 100, 128);
+.no-intro-body { 
+
 }
 
-.need-information {
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: rgb(128, 100, 128);
+.intro-form {
+
 }
 
-.about-overview-right {
-    color: rgb(105, 105, 105);
-    font-size: 12px;
-}
-
-.overview-right-list > li {
-    display: flex;
-    justify-content: flex-start;
-    padding: 16px 0 0;
-}
-
-.overview-right-list > li:first-child {
-    padding: 0;
-}
-
-.overview-right-text {
-    padding: 0 0 0 8px;
-}
-
-.overview-right-icon {
-    font-size: 16px;
-    color: thistle;
-}
-
-.overview-right-list:hover,
-li.has-information:hover {
-    background-color: rgb(250, 243, 250);
-}
-
-li.has-information:hover {
-    margin: -5px;
+.intro-edit-button{
+    box-shadow: 1px 1px 4px gray;
+    border-radius: 4px;
     padding: 5px;
+    margin: 5px 0;
 }
 
-li.has-information span {
-    display: none;
-    font-size: 12px;
-    font-weight: 400;
-    color: rgb(105, 105, 105);
+.intro-buttons {
+
 }
 
-li.has-information:hover span {
-    display: block;
+.cancelled {
+    box-shadow: 1px 1px 4px gray;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px 0;
 }
 
-li.has-information {
-    padding: 0;
-    margin: 0 0 20px;
+.save-changes {
+    box-shadow: 1px 1px 4px gray;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px 0;
+    margin-left: 8px;
 }
-
-
-.about-overview-right-edit p {
-    display: none;
-    color: rgb(105, 105, 105);
-}
-
-.overview-right-list:hover > .about-overview-right-edit p{
-    display: block;
-}
-
-.about-overview-right-edit p:hover {
-    text-decoration: underline;
-}
-
-.about-profile-section {
-    padding: 0;
-}
-
-
-.about-profile-left {
-    width: 100%;
-}
-
-.about-profile-label {
-    font-weight: bold;
-    font-size: 12px;
-    color: rgb(105, 105, 105);
-    margin: 0;
-    padding-bottom: 5px;
-}
-
-.about-profile-list.with-label {
-    border-top: 1px solid rgb(240, 212, 240);
-    margin: 0;
-}
-
-.about-profile-list.with-label > li {
-    padding: 12px 0 17px;
-}
-
-.about-contact .aboutprofile-list li {
-    display: flex;
-    justify-content: space-between;
-}
-
-.about-contact .about-profile-list.with-label {
-    padding: 0 0 30px;
-}
-
-.about-profile-content.about-living,
-.about-profile-content.about-contact {
-    padding-top: 15px;
-    padding-bottom: 0px;
-}
-
-
-.about-contact .hidden-about-form,
-.about-living .hidden-about-form {
-    display: none;
-}
-
-.about-contact .hidden-about-form .show,
-.about-living .hidden-about-form .show {
-    display: block;
-}
-
-.about-contact .hide,
-.about-living .hide {
-    display: none;
-}
-
-.about-profile-section {
-    font-size: 14px;
-}
-
-div.contact-left {
-    margin: 0 12px 0 0;
-    width: 180px;
-    color: rgb(105, 105, 105);
-}
-
-div.contact-right {
-    width: 360px;
-}
-
-div.contact-form-left, div.living-form-left {
-    width: 180px;
-    color: rgb(105, 105, 105);
-    text-align: right;
-}
-
-div.contact-form-right, div.living-form-right {
-    width: 360px;
-}
-
-li.about-list-view {
-    position: relative;
-}
-
-li.about-list-view > button:nth-last-child(3){
-    position: absolute;
-    right: 20px;
-}
-
-li.about-list-view > button:last-child {
-    position: absolute;
-    right: 0px;
-}
-
-li.about-list-view > button {
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    font-size: 12px;
-    display: none;
-    color: rgb(105, 105, 105);
-}
-
-
-
-li.about-list-view:hover > button,
-li.about-list-view:hover > .button-divider {
-    display: block;
-}
-
-.button-divider {
-    width: 1px;
-    height: 14px;
-    position: absolute;
-    border-right: 1px solid thistle;
-    right: 16px;
-    display: none;
-}
-
-
-li.about-list-view i.fa-pencil,
-li.about-list-view i.fa-times {
-    font-size: 12px;
-    padding: 0px;
-    margin: 0 4px 0 0;
-    color: rgb(105, 105, 105);
-}
-
-li.about-list-view i.fa-times {
-    margin: 0px;
-}
-
-button.delete-information {
-    width: 14px;
-    height: 14px;
-}
-
-
-.delete-information:hover {
-    background-color: rgb(105, 105, 105);
-    border-radius: 3px;
-}
-
-.delete-information:hover i.fa-times {
-    color: white;
-}
-
-li.about-list-view span:hover {
-    text-decoration: underline;
-}
-
-li.about-list-view:hover > button:hover {
-    display: block;
-}
-
-.about-profile-list > li.missing-information {
-    cursor: pointer;
-}
-
-li.hidden-about-form > form {
-    background-color: rgb(250, 243, 250);
-    padding: 14px 24px 13px 24px;
-    margin: -14px -24px -13px -24px;
-    box-sizing: border-box;
-    border-top: 1px solid rgb(236, 224, 236);
-    border-bottom: 1px solid rgb(236, 224, 236);
-}
-
-
-li.hidden-about-form > form input[type="text"] {
-    font-size: 14px;
-    width: 224px;
-    padding: 5px 7px 6px;
-    border: 1px solid rgb(236, 224, 236);
-}
-
-li.hidden-about-form {
-    border-bottom: none;
-    z-index: 2;
-}
-
-.hidden-form-list > li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0 5px;
-}
-
-.hidden-form-list > li:nth-last-child(2) {
-    padding: 0 0 10px;
-}
-
-.hidden-form-list > li:last-child {
-    padding-top: 10px;
-    border-top: 1px solid rgb(240, 212, 240);
-}
-
-input.save-changes {
-    font-size: 12px;
-    padding: 5px 10px;
-    box-sizing: content-box;
-    // display: block;
-    font-weight: bold;
-    background-color: rgb(128, 100, 128);
-    border: none;
-    border-radius: 3px;
-    color: white;
-}
-
-button.cancelled {
-    background-color: rgb(250, 243, 250);
-    border: 1px solid thistle;
-    border-radius: 3px;
-    font-size: 12px;
-    margin: 0 0 0 4px;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: rgb(105, 105, 105);
-}
-
-.contact-form-right > select {
-    font-size: 12px;
-    border: 1px solid rgb(236, 224, 236);
-}
-
-.about-living div.has-information {
-    font-size: 16px;
-    font-weight: bold;
-    color: rgb(128, 100, 128);
-}
-
-.about-living div.has-information > div:last-child {
-    font-size: 12px;
-    font-weight: 400;
-    color: rgb(105, 105, 105);
-} */
