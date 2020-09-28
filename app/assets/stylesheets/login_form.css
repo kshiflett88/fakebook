@@ -117,6 +117,21 @@
   font-size: 20px; 
 }
 
+.splash-contact {
+  display: flex;
+}
+
+.splash-links {
+  margin: 0 5px;
+}
+
+.splash-links:hover {
+  color: blue;
+}
+
+.copy-right {
+  margin: 0 5px;
+}
 
 
  

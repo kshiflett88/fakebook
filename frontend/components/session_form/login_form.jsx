@@ -60,11 +60,13 @@ class LoginForm extends React.Component {
 
   render() {
     return (
+    <div>
       <div className="login-form-container">
           <header className="login-home-page">
             <h1 className="login-form-title">fakebook</h1>
             <p className="login-message">Let's make some unreal connections</p>
           </header>
+          
         <div className="login-form">
 
           <form className="login-form-body" onSubmit={this.handleSubmit}>
@@ -95,6 +97,12 @@ class LoginForm extends React.Component {
           </form>
         </div>
       </div>
+        <div className="splash-contact">
+          <p className="copy-right">&copy; Kodi Shiflett 2020 </p>
+          <a className="splash-links" href="https://www.linkedin.com/in/kodi-shiflett-5a1a0644/">LinkedIn</a>
+          <a className="splash-links" href="https://github.com/kshiflett88" >Github</a>
+        </div>
+    </div>
     )
   }
 }
