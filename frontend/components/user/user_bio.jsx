@@ -60,7 +60,7 @@ class UserBio extends React.Component {
 
 
   handleChange(field) {
-    console.log(field)
+    
     return e => {
       this.setState({ [field]: e.target.value });
     }
