@@ -97,7 +97,7 @@ class SignupForm extends React.Component {
                 <span className="signup-label">Gender:</span>
                 <label className="signup-radio"><input type="radio" name="gender" value="Female" onClick={this.handleInput("gender")} />Female</label>
                 <label className="signup-radio"><input type="radio" name="gender" value="Male" onClick={this.handleInput("gender")} />Male</label>
-                <label className="signup-radio"><input type="radio" name="gender" value="Custom" onClick={this.handleInput("gender")} />Custom</label><br />
+                <label className="signup-radio"><input type="radio" name="gender" value="Other" onClick={this.handleInput("gender")} />Other</label><br />
               </div>
 
               <button className='signup-form-btn'>create user</button>

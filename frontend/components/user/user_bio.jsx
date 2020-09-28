@@ -111,18 +111,21 @@ class UserBio extends React.Component {
             ) : (
                 user === currentUser & this.state.showForm ? (
                   <form className="intro-form" onSubmit={this.handleSubmit.bind(this)}>
-                    <div>
+                    <div className="bio-form">
+                      <FaAddressCard className="intro-icon" />
                       <textarea value={this.state.bio} placeholder="Describe who you are" onChange={this.handleChange("bio")}></textarea>
                     </div>
                     <div>
-                      <select value={this.state.gender} onChange={this.handleChange("gender")}>
+                      <FaGenderless className="intro-icon" />
+                      <select className="gender-form" value={this.state.gender} onChange={this.handleChange("gender")}>
                         <option value="Female">Female</option>
                         <option value="Male">Male</option>
-                        <option value="Custom">Custom</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
                     <div>
-                      <select value={this.state.relationship_status} onChange={this.handleChange("relationship_status")}>
+                      <FaHeart className="intro-icon" />
+                      <select className="relationship-form" value={this.state.relationship_status} onChange={this.handleChange("relationship_status")}>
                         <option value="Single">Single</option>
                         <option value="In a relationship">In a relationship</option>
                         <option value="Complicated">Complicated</option>

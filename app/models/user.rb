@@ -16,7 +16,7 @@
 #
 class User < ApplicationRecord
     validates :username, :email, :password_digest, :gender, presence: true
-    validates :gender, inclusion: {in: ["Male", "Female", "Custom"]}
+    validates :gender, inclusion: {in: ["Male", "Female", "Other"]}
     # validates :relationship_status, inclusion: {in: ["Single", "In a relationship", "Complicated", "Married", "Engaged"]}
     validates :username, :email, uniqueness: true
     validates :password, length: {minimum: 6, allow_nil: true}
